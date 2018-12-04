@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css" integrity="sha256-vl+0p/Z28RcVvC+cofUiIeYusGdOc4CXk/taqgQ2/XU=" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,600,600i|Teko:400,500,600" rel="stylesheet">
+
+  <!-- Meta -->
+  <title>Zachary Kahl | Front-end Developer</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Hello, welcome to my personal portfolio.">
+  <meta name="keywords" content="Zachary Kahl, Web Design, Web Development, Graphic Design, Front-end Development, Freelance Web Development, Freelance Web Design, Freelance Graphic Design, Portfolio">
+  <meta name="author" content="Zachary Kahl">
+  <meta name="year" content="2018">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon.ico">
+
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <section id="nav" class="nav">
+    <button class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </button>
+    <input id="nav-check" class="nav-check" type="checkbox">
+    <div class="row justify-content-center">
+      <a class="col" href="#about"><h4>About</h4></a>
+      <a class="col" href="#services"><h4>Services</h4></a>
+      <a class="col brand" href="#landing"><img src="imgs/logo.svg" alt="logo"></a>
+      <a class="col" href="#portfolio"><h4>Portfolio</h4></a>
+      <a class="col" href="#contact"><h4>Contact</h4></a>
+    </div>
+  </section>
+
+  <!-- Landing -->
+  <section id="landing" class="landing">
+    <div class="container">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:serif="http://www.serif.com/" width="100%" height="100%" viewbox="0 0 200 200" version="1.1" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+        <g transform="matrix(0.625,0,0,0.625,-25,-25)">
+            <g>
+                <path class="z-b-w" d="M360,320L320,360L360,360L360,320Z"/>
+                <path class="z-t-w" d="M40,40L40,80L80,40L40,40Z"/>
+                <g transform="matrix(1.6,0,0,1.6,40,40)">
+                    <path class="z-t-r" d="M200,0L175,25L150,50L150,25L25,25L50,0L200,0Z"/>
+                </g>
+                <g transform="matrix(1.6,0,0,1.6,40,40)">
+                    <path class="z-b-r" d="M50,175L175,175L150,200L0,200L25,175L50,150L50,175Z"/>
+                </g>
+            </g>
+            <g>
+                <g transform="matrix(-0.666667,-8.16431e-17,8.16431e-17,-0.666667,453.333,400)">
+                    <path class="k-t" d="M380,300L320,360L380,360L380,300Z"/>
+                </g>
+                <g transform="matrix(-0.666667,8.16431e-17,8.16431e-17,0.666667,453.333,-7.53175e-13)">
+                    <path class="k-b" d="M380,300L320,360L380,360L380,300Z"/>
+                </g>
+                <g transform="matrix(0.902903,0,0,0.544707,41.1037,85.1973)">
+                    <rect class="k-l" x="131.682" y="137.326" width="22.151" height="146.868"/>
+                </g>
+            </g>
+        </g>
+      </svg>
+      <br>
+      <h1 class="name"><span class="font-gold">Zachary</span> Kahl</h1>
+      <h3 class="specialty">Front-end developer</h3>
+      <div class="btn-group cta">
+        <a href="#portfolio">
+          <button>
+            <h4>
+              My Work
+              <svg class="icon-a-circle-down">
+                <use xlink:href="icons.svg#icon-a-circle-down"></use>
+              </svg>
+            </h4>
+          </button>
+        </a>
+      </div>
+      <div class="social">
+        <!-- Developer -->
+        <a href="https://codepen.io/zackahl/">
+          <svg class="icon-dev-codepen">
+            <use xlink:href="icons.svg#icon-dev-codepen"></use>
+          </svg>
+        </a>
+        <a href="https://github.com/zackahl">
+          <svg class="icon-dev-github">
+            <use xlink:href="icons.svg#icon-dev-github"></use>
+          </svg>
+        </a>
+        <span class="divider"></span>
+        <!-- Social -->
+        <a href="https://www.instagram.com/zacharykahl/">
+          <svg class="icon-social-instagram">
+            <use xlink:href="icons.svg#icon-social-instagram"></use>
+          </svg>
+        </a>
+        <a href="https://twitter.com/zackahl">
+          <svg class="icon-social-twitter">
+            <use xlink:href="icons.svg#icon-social-twitter"></use>
+          </svg>
+        </a>
+        <a href="www.linkedin.com/in/zachary-kahl-2018">
+          <svg class="icon-social-linkedin">
+            <use xlink:href="icons.svg#icon-social-linkedin"></use>
+          </svg>
+        </a>
+        <span class="divider"></span>
+        <!-- Designer -->
+        <a href="https://www.behance.net/zacharykahl">
+          <svg class="icon-social-behance">
+            <use xlink:href="icons.svg#icon-social-behance"></use>
+          </svg>
+        </a>
+        <a href="https://dribbble.com/zacharykahl">
+          <svg class="icon-social-dribbble">
+            <use xlink:href="icons.svg#icon-social-dribbble"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous" async defer/>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="separators">
+      <img class="separator-left" src="imgs/shapes/separator-red-left.svg" alt="separator-red-left" data-aos="fade-up-right" data-aos-offset="100">
+      <img class="separator-right" src="imgs/shapes/separator-red-right.svg" alt="separator-red-right" data-aos="fade-up-left" data-aos-offset="100">
+    </div>
+    <div class="container">
+      <h1 data-aos="zoom-in-up" data-aos-offset="100">About Me</h1>
+      <div class="row justify-content-lg-end">
+        <div class="toolkit col-xs-12 col-lg-8" data-aos="zoom-in-left" data-aos-offset="200">
+          <h2>Toolkit</h2>
+          <div class="development row">
+            <div class="col-12">
+              <h3>Development</h3>
+            </div>
+            <div class="html col-4 col-md-2 offset-md-1">
+              <svg class="icon-dev-html5">
+                <use xlink:href="icons.svg#icon-dev-html5"></use>
+              </svg>
+              <p>HTML5</p>
+            </div>
+            <div class="css col-4 col-md-2">
+              <svg class="icon-dev-css3">
+                <use xlink:href="icons.svg#icon-dev-css3"></use>
+              </svg>
+              <p>CSS3</p>
+            </div>
+            <div class="javascript col-4 col-md-2">
+              <svg class="icon-dev-javascript">
+                <use xlink:href="icons.svg#icon-dev-javascript"></use>
+              </svg>
+              <p>Javascript</p>
+            </div>
+            <div class="jquery col-4 col-md-2">
+              <svg class="icon-dev-jquery">
+                <use xlink:href="icons.svg#icon-dev-jquery"></use>
+              </svg>
+              <p>JQuery</p>
+            </div>
+            <div class="vue col-4 col-md-2">
+              <svg class="icon-dev-vue">
+                <use xlink:href="icons.svg#icon-dev-vue"></use>
+              </svg>
+              <p>Vue</p>
+            </div>
+            <div class="bootstrap col-4 col-md-2 offset-md-1">
+              <svg class="icon-dev-bootstrap">
+                <use xlink:href="icons.svg#icon-dev-bootstrap"></use>
+              </svg>
+              <p>Bootstrap</p>
+            </div>
+            <div class="sass col-4 col-md-2">
+              <svg class="icon-dev-sass">
+                <use xlink:href="icons.svg#icon-dev-sass"></use>
+              </svg>
+              <p>SASS</p>
+            </div>
+            <div class="node col-4 col-md-2">
+              <svg class="icon-dev-npm">
+                <use xlink:href="icons.svg#icon-dev-npm"></use>
+              </svg>
+              <p>Node</p>
+            </div>
+            <div class="node col-4 col-md-2">
+              <svg class="icon-dev-codepen">
+                <use xlink:href="icons.svg#icon-dev-codepen"></use>
+              </svg>
+              <p>Codepen</p>
+            </div>
+            <div class="node col-4 col-md-2">
+              <svg class="icon-dev-github">
+                <use xlink:href="icons.svg#icon-dev-github"></use>
+              </svg>
+              <p>Github</p>
+            </div>
+          </div>
+          <div class="design row justify-content-center">
+            <div class="col-12">
+              <h3>Design</h3>
+            </div>
+            <div class="a-design col-4 col-md-2">
+              <svg class="icon-des-affinity">
+                <use xlink:href="icons.svg#icon-des-affinity"></use>
+              </svg>
+              <p>Affinity Designer</p>
+            </div>
+            <div class="a-photo col-4 col-md-2">
+              <svg class="icon-des-affinity">
+                <use xlink:href="icons.svg#icon-des-affinity"></use>
+              </svg>
+              <p>Affinity Photo</p>
+            </div>
+            <div class="photoshop col-4 col-md-2">
+              <svg class="icon-des-adobe-photoshop">
+                <use xlink:href="icons.svg#icon-des-adobe-photoshop"></use>
+              </svg>
+              <p>Photoshop</p>
+            </div>
+            <div class="illustrator col-4 col-md-2">
+              <svg class="icon-des-adobe-illustrator">
+                <use xlink:href="icons.svg#icon-des-adobe-illustrator"></use>
+              </svg>
+              <p>Illustrator</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-lg-start">
+        <div class="description col-xs-12 col-lg-8" data-aos="zoom-in-right" data-aos-offset="400">
+          <div class="col-12 col-md-6">
+            <p>
+              <strong class="font-large">Hi! My name is Zachary Kahl.</strong>
+              <br> I'm an aspiring front-end developer and designer who loves creating new websites from start to finish. Creating online experiences that are both intuitive and visually engaging is my main goal. I'm constantly researching the latest trends, learning new techniques and improving my skills so that each project exceeds the previous.
+            </p>
+            <img class="me" src="imgs/me.svg" alt="me" data-aos="zoom-in-up" data-aos-delay="100">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="services">
+    <div class="separators">
+      <img class="separator-left" src="imgs/shapes/separator-blue-left.svg" alt="separator-blue-left" data-aos="fade-up-right" data-aos-offset="100">
+      <img class="separator-mid" src="imgs/shapes/separator-red-mid.svg" alt="separator-red-mid" data-aos="fade-down" data-aos-offset="100">
+      <img class="separator-right" src="imgs/shapes/separator-blue-right.svg" alt="separator-blue-right" data-aos="fade-up-left" data-aos-offset="100">
+    </div>
+    <div class="container">
+      <div class="row justify-content-center justify-content-md-end">
+        <h1 data-aos="zoom-in-up" data-aos-offset="100">Services</h1>
+      </div>
+      <div class="service-block row">
+        <div class="service col-sm-12 col-md-4 align-self-start" data-aos="zoom-in-up">
+          <div>
+            <h3>Web Development</h3>
+            <svg class="icon-a-display">
+              <use xlink:href="icons.svg#icon-a-display"></use>
+            </svg>
+            <p>Developing websites from a basic framework to a finished product using the building blocks of HTML, CSS and JavaScript.</p>
+            <ul>
+              <li>Defining Requirements &amp; Planning</li>
+              <li>Development / Coding</li>
+              <li>Responsiveness, Compatibilty &amp; Optimisation Testing</li>
+              <li>Deployment &amp; Maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service col-sm-12 col-md-4 align-self-center" data-aos="zoom-in-up">
+          <div>
+            <h3>Web Design</h3>
+            <svg class="icon-a-web-design">
+              <use xlink:href="icons.svg#icon-a-web-design"></use>
+            </svg>
+            <p>Defining the look and feel of the website that best portrays a message, concept, brand, product or service.</p>
+            <ul>
+              <li>Colour Schemes, Typography, Graphics, UI</li>
+              <li>Sitemaps, Use Cases, Wireframes &amp; Mockups</li>
+              <li>Interactivity &amp; Functionality</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service col-sm-12 col-md-4 align-self-end" data-aos="zoom-in-up">
+          <div>
+            <h3>Graphic Design</h3>
+            <svg class="icon-a-graphic-design">
+              <use xlink:href="icons.svg#icon-a-graphic-design"></use>
+            </svg>
+            <p>Promoting products and ideas through logos, branding, advertisements, web design, packaging and more.</p>
+            <ul>
+              <li>Planning &amp; Drafting, Sketching Mockups</li>
+              <li>Developing the Design, Providing Variations</li>
+              <li>Presenting &amp; Refining the Final Product</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="separators">
+      <img class="separator-left" src="imgs/shapes/separator-red-left.svg" alt="separator-red-left" data-aos="fade-up-right" data-aos-offset="100">
+      <img class="separator-mid" src="imgs/shapes/separator-blue-mid.svg" alt="separator-blue-mid" data-aos="fade-down" data-aos-offset="100">
+      <img class="separator-right" src="imgs/shapes/separator-red-right.svg" alt="separator-red-right" data-aos="fade-up-left" data-aos-offset="100">
+    </div>
+    <div class="container">
+      <h1 data-aos="zoom-in-up" data-aos-offset="100">Portfolio</h1>
+      <div class="options row justify-content-center" data-aos="zoom-in-up">
+        <a class="col-xs-6 col-md-3 p-all active"><h4>All</h4></a>
+        <a class="col-xs-6 col-md-3 p-websites"><h4>Websites</h4></a>
+        <a class="col-xs-6 col-md-3 p-graphics"><h4>Graphics</h4></a>
+        <a class="col-xs-6 col-md-3 p-blogs"><h4>Blogs</h4></a>
+      </div>
+      <div class="gallery row" data-aos="zoom-in-up" data-aos-offset="400">
+        <div class="work website col-xs-12 col-md-3">
+            <div class="block">
+              <span class="year">2018</span>
+              <div class="caption">Country Info</div>
+              <p class="summary">A simple interface for searching and displaying country specific data. Search for data using the country name, alpha code or capital city.</p>
+              <div class="links">
+                <a href="https://github.com/zackahl/country-info" target="_blank" rel="noopener">
+                  <svg class="icon-dev-github">
+                    <use xlink:href="icons.svg#icon-dev-github"></use>
+                  </svg>
+                </a>
+                <a href="https://www.country-info.com" target="_blank" rel="noopener">
+                  <svg class="icon-a-link">
+                    <use xlink:href="icons.svg#icon-a-link"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+        </div>
+        <div class="work graphic col-xs-12 col-md-3">
+          <div class="block">
+            <span class="year">2018</span>
+            <div class="caption">Self Portrait</div>
+            <img src="imgs/me.svg" alt="me">
+            <div class="links">
+              <a href="https://dribbble.com/shots/5499281-Self-Portrait" target="_blank" rel="noopener">
+                <svg class="icon-social-dribbble">
+                  <use xlink:href="icons.svg#icon-social-dribbble"></use>
+                </svg>
+              </a>
+              <a href="https://www.instagram.com/p/Bpysu13FHvH/" target="_blank" rel="noopener">
+                <svg class="icon-social-instagram">
+                  <use xlink:href="icons.svg#icon-social-instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="work blog col-xs-12 col-md-3">
+          <div class="block">
+            <span class="year">2018</span>
+            <div class="caption">Blog</div>
+            <p class="summary">Coming soon...</p>
+            <div class="links">
+              <a href="#portfolio">
+                <svg class="icon-a-link">
+                  <use xlink:href="icons.svg#icon-a-link"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="separators">
+      <img class="separator-left" src="imgs/shapes/separator-blue-left.svg" alt="separator-blue-left" data-aos="fade-up-right" data-aos-offset="100">
+      <img class="separator-mid" src="imgs/shapes/separator-red-mid.svg" alt="separator-red-mid" data-aos="fade-down" data-aos-offset="100">
+      <img class="separator-right" src="imgs/shapes/separator-blue-right.svg" alt="separator-blue-right" data-aos="fade-up-left" data-aos-offset="100">
+    </div>
+    <div class="container">
+      <h1 data-aos="zoom-in-up" data-aos-offset="100">Contact</h1>
+      <form name="contact" method="POST" netifly> <!-- Add 'netifly' tag to activate --> 
+        <div class="row justify-content-center">
+          <div class="col-12" data-aos="zoom-in-up" data-aos-offset="400">
+            <svg class="icon-a-email">
+              <use xlink:href="icons.svg#icon-a-email"></use>
+            </svg>
+            <h3>
+              zac.kahl@gmail.com
+              </h3>
+          </div>
+          <div class="col-xs-12 col-md-4"  data-aos="zoom-in-up" data-aos-offset="200">
+            <label>
+              <p>Name:</p>
+              <input type="text" name="name" />
+            </label>
+          </div>
+          <div class="col-xs-12 col-md-4"  data-aos="zoom-in-up" data-aos-offset="200">
+            <label>
+              <p>Email:</p>
+              <input type="email" name="email" />
+            </label>
+          </div>
+          <div class="col-xs-12"></div>
+          <div class="col-xs-12 col-md-8"  data-aos="zoom-in-up" data-aos-offset="200">
+            <label>
+              <p>Inquiry:</p>
+              <textarea name="message"></textarea>
+            </label>
+          </div>
+        </div>
+        <div class="btn-group"  data-aos="zoom-in-up" data-aos-offset="50">
+          <button type="submit">
+            <h4>              
+              Send
+              <svg class="icon-a-message">
+                <use xlink:href="icons.svg#icon-a-message"></use>
+              </svg>
+            </h4>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Footer -->
+    <div id="footer" class="footer">
+      <div class="row">
+        <div class="col">
+          <div class="social">
+            <!-- Developer -->
+            <a href="https://codepen.io/zackahl/">
+              <svg class="icon-dev-codepen">
+                <use xlink:href="icons.svg#icon-dev-codepen"></use>
+              </svg>
+            </a>
+            <a href="https://github.com/zackahl">
+              <svg class="icon-dev-github">
+                <use xlink:href="icons.svg#icon-dev-github"></use>
+              </svg>
+            </a>
+            <span class="divider"></span>
+            <!-- Social -->
+            <a href="https://www.instagram.com/zacharykahl/">
+              <svg class="icon-social-instagram">
+                <use xlink:href="icons.svg#icon-social-instagram"></use>
+              </svg>
+            </a>
+            <a href="https://twitter.com/zackahl">
+              <svg class="icon-social-twitter">
+                <use xlink:href="icons.svg#icon-social-twitter"></use>
+              </svg>
+            </a>
+            <a href="www.linkedin.com/in/zachary-kahl-2018">
+              <svg class="icon-social-linkedin">
+                <use xlink:href="icons.svg#icon-social-linkedin"></use>
+              </svg>
+            </a>
+            <span class="divider"></span>
+            <!-- Designer -->
+            <a href="https://www.behance.net/zacharykahl">
+              <svg class="icon-social-behance">
+                <use xlink:href="icons.svg#icon-social-behance"></use>
+              </svg>
+            </a>
+            <a href="https://dribbble.com/zacharykahl">
+              <svg class="icon-social-dribbble">
+                <use xlink:href="icons.svg#icon-social-dribbble"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <p>&copy; Zachary Kahl 2018</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous" async defer></script>
+  <script type="text/javascript" src="js/modernizr-custom.min.js"></script>
+  <script type="text/javascript" src="js/functions.min.js" async defer></script>
+
+</body>
+
+</html>
