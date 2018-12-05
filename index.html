@@ -400,7 +400,7 @@
     </div>
     <div class="container">
       <h1 data-aos="zoom-in-up" data-aos-offset="100">Contact</h1>
-      <form name="contact" method="POST" netifly> <!-- Add 'netifly' tag to activate --> 
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify>
         <div class="row justify-content-center">
           <div class="col-12" data-aos="zoom-in-up" data-aos-offset="400">
             <svg class="icon-a-email">
@@ -410,6 +410,7 @@
               zac.kahl@gmail.com
               </h3>
           </div>
+          <input type="hidden" name="bot-field">
           <div class="col-xs-12 col-md-4"  data-aos="zoom-in-up" data-aos-offset="200">
             <label>
               <p>Name:</p>
