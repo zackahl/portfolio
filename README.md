@@ -1,5 +1,4 @@
 # Portfolio Website
-My personal portfolio.
 www.zacharykahl.com
 
 ## Version 1.00
