@@ -14,6 +14,7 @@ body {
   padding: 0; }
 
 section {
+  -webkit-transition: background-position 1s ease-out;
   transition: background-position 1s ease-out;
   z-index: 1; }
 
@@ -54,6 +55,7 @@ a {
   color: #fff;
   margin: auto;
   text-decoration: none;
+  -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
 
 strong {
@@ -64,8 +66,13 @@ strong {
   fill: #fff;
   height: 2rem;
   padding: 0 5px;
+  -webkit-transition: 0.2s cubic-bezier(1, 0.25, 0, 0.75) 0s;
   transition: 0.2s cubic-bezier(1, 0.25, 0, 0.75) 0s;
   width: 2rem; }
+
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 1; } }
 
 @keyframes fade-in {
   to {
@@ -83,7 +90,9 @@ strong {
   margin: 0; }
 
 .nav {
+  -webkit-animation: slide-down 2s forwards;
   animation: slide-down 2s forwards;
+  -webkit-animation-delay: 3s;
   animation-delay: 3s;
   background: #0d0f1a;
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
@@ -94,9 +103,14 @@ strong {
   position: fixed;
   text-align: center;
   top: 0;
+  -webkit-transition: ease-out .2s;
   transition: ease-out .2s;
   width: 100%;
   z-index: 3; }
+
+@-webkit-keyframes slide-down {
+  to {
+    margin-top: 0; } }
 
 @keyframes slide-down {
   to {
@@ -121,17 +135,21 @@ strong {
       height: 1px;
       left: 20%;
       position: absolute;
+      -webkit-transform: scaleX(0);
       transform: scaleX(0);
+      -webkit-transition: 0.2s cubic-bezier(1, 0.25, 0, 0.75) 0s;
       transition: 0.2s cubic-bezier(1, 0.25, 0, 0.75) 0s;
       visibility: hidden;
       width: 60%; }
     .nav a.active, .nav a:hover, .nav a:active, .nav a:focus {
       color: #fbb350; }
       .nav a.active::before, .nav a:hover::before, .nav a:active::before, .nav a:focus::before {
+        -webkit-transform: scaleX(1);
         transform: scaleX(1);
         visibility: visible; }
 
 .landing {
+  -webkit-animation: fade-in 1s forwards;
   animation: fade-in 1s forwards;
   background: #111321 url("../imgs/backgrounds/landing-mountains.webp") no-repeat fixed center;
   background-blend-mode: multiply;
@@ -140,7 +158,9 @@ strong {
   .landing .container {
     padding-top: 20vh; }
   .landing .logo {
+    -webkit-animation: logo-position .5s forwards;
     animation: logo-position .5s forwards;
+    -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s;
     margin-top: 15vh;
     max-width: 50vw;
@@ -148,56 +168,83 @@ strong {
     width: 10vw; }
     .landing .logo .z-b-w,
     .landing .logo .z-t-w {
+      -webkit-animation: logo-animate .5s forwards;
       animation: logo-animate .5s forwards;
+      -webkit-animation-delay: .5s;
       animation-delay: .5s;
       fill: #fff;
       opacity: 0; }
     .landing .logo .z-b-r,
     .landing .logo .z-t-r {
+      -webkit-animation: logo-animate .5s forwards;
       animation: logo-animate .5s forwards;
+      -webkit-animation-delay: 1s;
       animation-delay: 1s;
       fill: #e24f4f;
       opacity: 0; }
     .landing .logo .z-b-w {
+      -webkit-transform: translate(-80px, -80px);
       transform: translate(-80px, -80px); }
     .landing .logo .z-t-w {
+      -webkit-transform: translate(80px, 80px);
       transform: translate(80px, 80px); }
     .landing .logo .z-t-r {
+      -webkit-transform: translate(180px, 0);
       transform: translate(180px, 0); }
     .landing .logo .z-b-r {
+      -webkit-transform: translate(-180px, 0);
       transform: translate(-180px, 0); }
     .landing .logo .k-l,
     .landing .logo .k-t,
     .landing .logo .k-b {
+      -webkit-animation: logo-animate .5s forwards;
       animation: logo-animate .5s forwards;
       fill: #fff;
       opacity: 0; }
 
+@-webkit-keyframes logo-animate {
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0);
+    transform: translate(0); } }
+
 @keyframes logo-animate {
   to {
     opacity: 1;
+    -webkit-transform: translate(0);
     transform: translate(0); } }
+
+@-webkit-keyframes logo-position {
+  to {
+    margin: 0; } }
 
 @keyframes logo-position {
   to {
     margin: 0; } }
   .landing .name,
   .landing .cta {
+    -webkit-animation: fade-in .5s forwards;
     animation: fade-in .5s forwards;
     margin-top: 8vh;
     opacity: 0; }
   .landing .name {
+    -webkit-animation-delay: 2s;
     animation-delay: 2s; }
   .landing .cta {
+    -webkit-animation-delay: 3s;
     animation-delay: 3s; }
   .landing .specialty {
+    -webkit-animation: fade-in .5s forwards;
     animation: fade-in .5s forwards;
+    -webkit-animation-delay: 2.5s;
     animation-delay: 2.5s;
     font-weight: 400;
     letter-spacing: .4em;
     opacity: 0; }
   .landing .social {
+    -webkit-animation: fade-in .5s forwards;
     animation: fade-in .5s forwards;
+    -webkit-animation-delay: 3.5s;
     animation-delay: 3.5s;
     bottom: 5vh;
     left: 0;
@@ -241,10 +288,13 @@ strong {
     border: 1px solid #fbb350; }
     .about .description .col-md-2:nth-of-type(odd) svg,
     .about .toolkit .col-md-2:nth-of-type(odd) svg {
+      -webkit-animation-delay: 1s;
       animation-delay: 1s; }
   .about .separator-left,
   .about .separator-right {
+    -webkit-animation: slide-up 2s forwards;
     animation: slide-up 2s forwards;
+    -webkit-animation-delay: 3.5s;
     animation-delay: 3.5s; }
 
 .services {
@@ -268,6 +318,7 @@ strong {
       margin-top: -40px;
       pointer-events: none;
       position: absolute;
+      -webkit-transform: translateX(-50%) rotate(45deg);
       transform: translateX(-50%) rotate(45deg);
       width: 50px;
       z-index: -1; }
@@ -279,6 +330,7 @@ strong {
       height: 100%;
       margin: 2px;
       padding: 10px;
+      -webkit-transition: .3s ease-in-out;
       transition: .3s ease-in-out;
       z-index: 2; }
     .services .service svg {
@@ -294,6 +346,7 @@ strong {
       overflow: hidden;
       padding-left: 20px;
       text-align: left;
+      -webkit-transition: .5s linear;
       transition: .5s linear; }
     .services .service:hover div {
       background-color: #0d0f1a; }
@@ -312,6 +365,7 @@ strong {
     width: 100%; }
     .portfolio .options a {
       cursor: pointer;
+      -webkit-transition: .2s linear;
       transition: .2s linear; }
       .portfolio .options a:hover, .portfolio .options a:active, .portfolio .options a:focus {
         color: #fbb350; }
@@ -328,15 +382,16 @@ strong {
         background-color: rgba(17, 19, 33, 0.5);
         height: 100%;
         outline: 1px solid transparent;
-        padding: 45px 10px;
+        padding: 50px 10px;
         position: relative;
         text-align: center;
+        -webkit-transition: .2s linear;
         transition: .2s linear; }
         .portfolio .gallery .work .block .summary {
           font-size: 13px; }
         .portfolio .gallery .work .block img {
           margin: auto;
-          max-height: 150px;
+          max-height: 125px;
           position: relative; }
         .portfolio .gallery .work .block .caption,
         .portfolio .gallery .work .block .links {
@@ -345,6 +400,7 @@ strong {
           padding: 10px;
           position: absolute;
           text-align: left;
+          -webkit-transition: .2s linear;
           transition: .2s linear;
           width: 100%; }
         .portfolio .gallery .work .block .caption {
@@ -359,7 +415,10 @@ strong {
           position: absolute;
           right: 0;
           top: 0;
+          -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+          -webkit-writing-mode: tb-rl;
+          -ms-writing-mode: tb-rl;
           writing-mode: tb-rl;
           z-index: 2; }
         .portfolio .gallery .work .block .links {
@@ -369,6 +428,7 @@ strong {
             height: 1rem; }
           .portfolio .gallery .work .block .links a:hover svg {
             fill: #fbb350;
+            -webkit-transform: scale(1.2);
             transform: scale(1.2); }
       .portfolio .gallery .work:hover .block {
         background-color: rgba(17, 19, 33, 0.7);
@@ -429,10 +489,13 @@ strong {
 .blogs {
   background-color: #111321; }
   .blogs .nav {
+    -webkit-animation: none;
     animation: none;
     background: #0d0f1a;
     margin-top: 0; }
   .blogs .title-block {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
     align-items: baseline; }
     .blogs .title-block .title {
       display: block;
@@ -464,6 +527,8 @@ strong {
     text-align: right; }
   .blogs .code-block {
     color: #fbb350;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -472,6 +537,7 @@ strong {
 
 .social [class^='icon-']:hover {
   fill: #e24f4f;
+  -webkit-transform: translateY(5px);
   transform: translateY(5px); }
 
 .social .divider {
@@ -525,6 +591,7 @@ strong {
   cursor: pointer;
   margin: 0 5px;
   padding: 0 8px 0 13px;
+  -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
   .btn-group button:hover {
     background-color: transparent;
@@ -585,11 +652,13 @@ strong {
     min-width: 100vw;
     text-align: center; }
   [class^='separator-'] {
+    -webkit-animation: none;
     animation: none;
     display: none; }
   .nav {
     border-bottom: 1px solid #fff; }
     .nav .row {
+      -webkit-transition: all .3s ease;
       transition: all .3s ease; }
     .nav .nav-btn {
       background: 0;
@@ -610,6 +679,7 @@ strong {
           display: block;
           height: 8px;
           margin: auto;
+          -webkit-transition: width .3s ease-in-out;
           transition: width .3s ease-in-out;
           width: 30px; }
       .nav .nav-btn .toggle span {
@@ -627,10 +697,14 @@ strong {
       height: 228px;
       overflow: hidden; }
     .nav .col {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
       flex: 0 0 100%;
       margin-bottom: 1px;
       padding: 10px; }
     .nav .brand {
+      -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
       order: -1;
       text-align: left; }
   .about,
@@ -681,6 +755,7 @@ strong {
   .contact .footer {
     padding: 10px 10vw; }
     .contact .footer .col {
+      -ms-flex-preferred-size: auto;
       flex-basis: auto; }
     .contact .footer .social,
     .contact .footer p {
@@ -688,6 +763,8 @@ strong {
   .blogs {
     margin-top: 5vh; }
     .blogs .title-block {
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
       align-items: baseline; }
       .blogs .title-block .title {
         font-size: 3rem; }
