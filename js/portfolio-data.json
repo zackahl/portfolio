@@ -1,0 +1,184 @@
+[
+  {
+    "index": 0,
+    "category": "blog",
+    "caption": "Blog",
+    "summary": "Coming soon...",
+    "year": "2018",
+    "image": null,
+    "links": {
+      "dribbble": {
+        "active": false,
+        "link": null
+      },
+      "instagram": {
+        "active": false,
+        "link": null
+      },
+      "github": {
+        "active": false,
+        "link": null
+      },
+      "website": {
+        "active": false,
+        "link": "#"
+      }
+    }
+  },
+  {
+    "index": 1,
+    "category": "graphic",
+    "caption": "Personal Logo",
+    "summary": null,
+    "year": "2018",
+    "image": "../imgs/logo.svg",
+    "links": {
+      "dribbble": {
+        "active": true,
+        "link": "https://dribbble.com/shots/5779289-Personal-Logo-ZK"
+      },
+      "instagram": {
+        "active": true,
+        "link": "https://www.instagram.com/p/BsKbTZPA1NV"
+      },
+      "github": {
+        "active": false,
+        "link": null
+      },
+      "website": {
+        "active": false,
+        "link": null
+      }
+    }
+  },
+  {
+    "index": 2,
+    "category": "graphic",
+    "caption": "Self Portrait",
+    "summary": null,
+    "year": "2018",
+    "image": "../imgs/me.svg",
+    "links": {
+      "dribbble": {
+        "active": true,
+        "link": "https://dribbble.com/shots/5499281-Self-Portrait"
+      },
+      "instagram": {
+        "active": true,
+        "link": "https://www.instagram.com/p/Bpysu13FHvH"
+      },
+      "github": {
+        "active": false,
+        "link": null
+      },
+      "website": {
+        "active": false,
+        "link": null
+      }
+    }
+  },
+  {
+    "index": 3,
+    "category": "website",
+    "caption": "Country Info",
+    "summary": "A simple interface for searching and displaying country specific data. Search for data using the country name, alpha code or capital city.",
+    "year": "2018",
+    "image": null,
+    "links": {
+      "dribbble": {
+        "active": false,
+        "link": null
+      },
+      "instagram": {
+        "active": false,
+        "link": null
+      },
+      "github": {
+        "active": true,
+        "link": "https://github.com/zackahl/country-info"
+      },
+      "website": {
+        "active": true,
+        "link": "https://www.country-info.com"
+      }
+    }
+  },
+  {
+    "index": 4,
+    "category": "website",
+    "caption": "Avatar Generator",
+    "summary": "Generate a unique pixelated avatar based on your username.",
+    "year": "2019",
+    "image": null,
+    "links": {
+      "dribbble": {
+        "active": false,
+        "link": null
+      },
+      "instagram": {
+        "active": false,
+        "link": null
+      },
+      "github": {
+        "active": true,
+        "link": "https://github.com/zackahl/avatar-generator"
+      },
+      "website": {
+        "active": true,
+        "link": "https://zackahl.github.io/avatar-generator"
+      }
+    }
+  },
+  {
+    "index": 5,
+    "category": "website",
+    "caption": "Anagramatic",
+    "summary": "A word game where you're tasked with finding as many hidden words or anagrams as you can in under one minute.",
+    "year": "2019",
+    "image": null,
+    "links": {
+      "dribbble": {
+        "active": false,
+        "link": null
+      },
+      "instagram": {
+        "active": false,
+        "link": null
+      },
+      "github": {
+        "active": true,
+        "link": "https://github.com/zackahl/anagramatic"
+      },
+      "website": {
+        "active": true,
+        "link": "https://zackahl.github.io/anagramatic/"
+      }
+    }
+  },
+  {
+    "index": 6,
+    "category": "graphic",
+    "caption": "Daily Logo Challenge",
+    "summary": null,
+    "year": "2019",
+    "image": "https://bit.ly/2Y2q2FY",
+    "links": {
+      "dribbble": {
+        "active": true,
+        "link": "https://dribbble.com/zacharykahl/buckets/1129122-Daily-Logo-Challenge"
+      },
+      "instagram": {
+        "active": true,
+        "link": "https://www.instagram.com/p/BsHmQ_2AXDl/"
+      },
+      "github": {
+        "active": false,
+        "link": null
+      },
+      "website": {
+        "active": false,
+        "link": null
+      }
+    }
+  }
+]

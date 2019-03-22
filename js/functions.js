@@ -1,7 +1,15 @@
 /*jslint browser: true*/
 /*jshint esnext: true*/
 /*jshint sub: true*/
-/*global window, $*/
+/*global window, $, AOS*/
+
+$(window).on('load', function () {
+  //setTimeout(function () {
+      $("#loader").fadeOut(300, function(){
+          $(this).remove();
+      });
+  //}, 2000);
+});
 
 $(document).ready( function() {
 
@@ -101,27 +109,140 @@ $(document).ready( function() {
       $('#nav a:eq(4)').addClass('active');
     }
   });
-
+  
   // -- Portfolio Options --
-
+  
   var work = $('.work:not(.year)');
 
   // Click events
-  $('.p-all').on('click', function() {
+  $('#portfolio').on('click', '.p-all', function() {
     work.fadeIn();
   });
-  $('.p-websites').on('click', function() {
+  $('#portfolio').on('click', '.p-websites', function() {
     work.fadeOut();
     $('.website').fadeIn();
   });
-  $('.p-graphics').on('click', function() {
+  $('#portfolio').on('click', '.p-graphics', function() {
     work.fadeOut();
     $('.graphic').fadeIn();
   });
-  $('.p-blogs').on('click', function() {
+  $('#portfolio').on('click', '.p-blogs', function() {
     work.fadeOut();
     $('.blog').fadeIn();
   });
+
+  // -- Portfolio Content --
+
+  var loadWorks = function(arrStart, arrEnd) {
+
+    // Create html for each portfolio item
+    for (var i = arrStart - 1; i >= arrEnd; i--) {
+      var obj = "";
+
+        obj += '<div class="work ' + objArray[i].category + ' col-xs-12 col-md-3">' +
+               '<div class="block">' +
+               '<span class="year">' + objArray[i].year + '</span>';
+
+      if(objArray[i].links.website.active === true) {
+        obj += '<div class="caption"><a href="' + objArray[i].links.website.link + '">' + objArray[i].caption + '</a></div>';
+      } else {
+        obj += '<div class="caption">' + objArray[i].caption + '</div>';
+      }
+
+      if(objArray[i].summary !== null) {
+        obj += '<p class="summary">' + objArray[i].summary + '</p>';
+      }
+
+      if(objArray[i].image !== null) {
+        obj += '<img src="' + objArray[i].image + '" alt="' + objArray[i].caption + '">';
+      }
+
+        obj += '<div class="links">';
+
+      if(objArray[i].links.dribbble.active === true) {
+        obj += '<a href="' + objArray[i].links.dribbble.link + '" target="_blank" rel="noopener">' +
+               '<svg class="icon-social-dribbble">' +
+               '<use xlink:href="icons.svg#icon-social-dribbble"></use>' +
+               '</svg></a>';
+      }
+
+      if(objArray[i].links.instagram.active === true) {
+        obj += '<a href="' + objArray[i].links.instagram.link + '" target="_blank" rel="noopener">' +
+               '<svg class="icon-social-instagram">' +
+               '<use xlink:href="icons.svg#icon-social-instagram"></use>' +
+               '</svg></a>';
+      }
+
+      if(objArray[i].links.github.active === true) {
+        obj += '<a href="' + objArray[i].links.github.link + '" target="_blank" rel="noopener">' +
+               '<svg class="icon-dev-github">' +
+               '<use xlink:href="icons.svg#icon-dev-github"></use>' +
+               '</svg></a>';
+      }
+
+      if(objArray[i].links.website.active === true) {
+        obj += '<a href="' + objArray[i].links.website.link + '" target="_blank" rel="noopener">' +
+               '<svg class="icon-a-link">' +
+               '<use xlink:href="icons.svg#icon-a-link"></use>' +
+               '</svg></a>';
+      }
+
+        obj += '</div></div></div>';
+
+      // Append to gallery
+      $('#gallery').append(obj);
+    }
+
+    // Update work event bindings for options
+    work = $('.work:not(.year)');
+
+    // 
+    if(arrEnd === 0) {
+      $('.load-more').fadeOut();
+    }
+  };
+
+  // Get data objects from json
+  var objArray = [];
+  var requestURL = '/js/portfolio-data.json';
+  var request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+
+  // When the request has loaded
+  request.onload = function() {
+    objArray = request.response;
+
+    // -- Load Portfolio items --
+
+    // Initial load of 4 items
+    var arrStart = objArray.length;
+    var arrEnd = objArray.length - 4;
+    loadWorks(arrStart, arrEnd);
+
+    // Load 4 more items each click
+    $('.load-more').on('click', function() {
+      // Change range array range by 4
+      arrEnd -= 4;
+      if(arrEnd <= 0) {
+        arrEnd = 0; 
+      }
+      arrStart -= 4;
+      if(arrStart <= 0) {
+        arrStart = 0; 
+      }
+
+      // Call loadWorks function
+      loadWorks(arrStart, arrEnd);
+
+      // Reset to default option display all
+      $('#portfolio .p-all').click();
+    });
+
+    // Load further 4 items on page load
+    $('#portfolio .load-more').click();
+  };
 
   // Active link class
   $(function () {
@@ -132,5 +253,3 @@ $(document).ready( function() {
   });
 
 });
-
-

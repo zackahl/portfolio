@@ -10,14 +10,7 @@ $c-red: #e24f4f;
 $c-gold: #fbb350;
 $c-white: #fff;
 $c-black: #000;
-//$texture: none;
 $texture: url('../imgs/texture.png');
-
-// Mixins
-
-/*@mixin underline($width, $style, $color) {
-  border-bottom: $width $style $color;
-}*/
 
 // Elements
 
@@ -106,6 +99,100 @@ strong {
 }
 
 // Classes
+
+.loader {
+  background-color: $c-blue;
+  display: flex;
+  height: 100%;
+  left: 0;
+  min-height: 100vh;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  .boxes {
+    margin: auto;
+
+    .box {
+      animation: bouncing 3s infinite;
+      background: $c-red;
+      display: inline-flex;
+      height: 16px;
+      margin: 10px;
+      position: relative;
+      transition: 3s ease-in-out;
+      width: 16px;
+
+      &:nth-of-type(2) {
+        animation-delay: .5s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: 1s;
+      }
+    }
+
+    @keyframes bouncing {
+      0% {
+        bottom: 0;
+        transform: scale(1);
+      }
+
+      10% {
+        bottom: 33px;
+        transform: scale(1);
+      }
+
+      20% {
+        bottom: 0;
+        transform: scaleY(.95) scaleX(1.05);
+      }
+
+      30% {
+        bottom: 66px;
+        transform: scale(1);
+      }
+
+      40% {
+        bottom: 0;
+        transform: scaleY(.9) scaleX(1.1);
+      }
+
+      50% {
+        background-color: $c-gold;
+        bottom: 99px;
+        transform: scale(1);
+      }
+
+      60% {
+        bottom: 0;
+        transform: scaleY(.85) scaleX(1.15);
+      }
+
+      70% {
+        bottom: 66px;
+        transform: scale(1);
+      }
+
+      80% {
+        bottom: 0;
+        transform: scaleY(.9) scaleX(1.1);
+      }
+
+      90% {
+        bottom: 33px;
+        transform: scale(1);
+      }
+
+      100% {
+        bottom: 0;
+        transform: scaleY(.95) scaleX(1.05);
+      }
+    }
+  }
+}
 
 .container {
   height: 100%;
@@ -467,7 +554,7 @@ strong {
   }
 
   .gallery {
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 
     .work {
       margin-top: 20px;
@@ -628,9 +715,9 @@ strong {
 
 .blogs {
   background-color: $c-blue;
-  
+
   .nav {
-    animation: none; 
+    animation: none;
     background: $c-blue-dark;
     margin-top: 0;
   }
@@ -653,9 +740,9 @@ strong {
   }
 
   .byline {
-    padding-bottom: 1vh; 
-    margin-bottom: 2vh;
     border-bottom: 1px solid rgba($c-white, .03);
+    margin-bottom: 2vh;
+    padding-bottom: 1vh;
   }
 
   .post {
@@ -680,16 +767,16 @@ strong {
     }
 
     .share {
-      padding: 20px 0; 
+      padding: 20px 0;
       text-align: right;
     }
   }
 
   .code-block {
-    color: $c-gold;
-    display: flex;
     background-color: rgba($c-black, .5);
     border-radius: 5px;
+    color: $c-gold;
+    display: flex;
     font-size: 1rem;
     padding: 10px;
   }
@@ -774,6 +861,10 @@ strong {
       border: 1px solid $c-white;
     }
 
+    &:focus {
+      outline: 0;
+    }
+
     svg {
       margin-bottom: -10px;
     }
@@ -847,7 +938,7 @@ strong {
       display: none;
     }
   }
-  
+
   .blogs {
     .post {
       img {
@@ -889,7 +980,7 @@ strong {
   }
 
   .nav {
-    border-bottom: 1px solid $c-white;  
+    border-bottom: 1px solid $c-white;
 
     .row {
       transition: all .3s ease;
@@ -1098,13 +1189,13 @@ strong {
       .img-right,
       .img-left {
         float: none;
-        margin: 20px auto 0 auto;
+        margin: 20px auto 0;
       }
     }
   }
 
   .footer {
-    padding: 15px; 
+    padding: 15px;
   }
 }
 
