@@ -126,10 +126,10 @@ $(document).ready( function() {
     work.fadeOut();
     $('.graphic').fadeIn();
   });
-  $('#portfolio').on('click', '.p-blogs', function() {
+  /*$('#portfolio').on('click', '.p-blogs', function() {
     work.fadeOut();
     $('.blog').fadeIn();
-  });
+  });*/
 
   // -- Portfolio Content --
 
@@ -216,6 +216,9 @@ $(document).ready( function() {
 
     // -- Load Portfolio items --
 
+    // Sort objects
+    objArray.sort((a,b) => (a.year > b.year) ? 1 : ((b.year > a.year) ? -1 : 0))
+
     // Initial load of 4 items
     var arrStart = objArray.length;
     var arrEnd = objArray.length - 4;
@@ -251,5 +254,10 @@ $(document).ready( function() {
       $(this).addClass('active');
     });
   });
+
+  // Get current year for copyright
+	var date = new Date();
+	var year = date.getFullYear();
+	document.getElementById("year").innerHTML = year;
 
 });

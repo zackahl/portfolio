@@ -1,10 +1,10 @@
 [
   {
     "index": 0,
-    "category": "blog",
-    "caption": "Blog",
-    "summary": "Coming soon...",
-    "year": "2018",
+    "category": "website",
+    "caption": "Exercise Timers",
+    "summary": "Stopwatch, countdown and interval timers to use when exercising.",
+    "year": "2019",
     "image": null,
     "links": {
       "dribbble": {
@@ -16,12 +16,12 @@
         "link": null
       },
       "github": {
-        "active": false,
-        "link": null
+        "active": true,
+        "link": "https://github.com/zackahl/exercise-timers"
       },
       "website": {
-        "active": false,
-        "link": "#"
+        "active": true,
+        "link": "http://www.exercise-timers.com/"
       }
     }
   },
@@ -161,7 +161,7 @@
     "caption": "Daily Logo Challenge",
     "summary": null,
     "year": "2019",
-    "image": "https://bit.ly/2Y2q2FY",
+    "image": "https://instagram.fbne4-1.fna.fbcdn.net/v/t51.2885-15/e35/s320x320/47582173_2300507569984089_2927315630896327284_n.jpg?_nc_ht=instagram.fbne4-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=_jPhvXVoZXYAX9V75zs&tp=1&oh=47d04356bc63ac847205d128a4ca6319&oe=603A964C",
     "links": {
       "dribbble": {
         "active": true,
